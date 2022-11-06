@@ -12,7 +12,7 @@ description = """
 Easily find config files and directories for your CLI application.
 """
 categories = [
-    "configuration",
+    "config",
     "filesystem",
 ]
 keywords = [
