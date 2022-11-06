@@ -76,8 +76,13 @@ assert_eq!(with_local.path(), Path::new("~/work/.config/pear/config.kdl"));
 assert_eq!(with_local.local_path(), Path::new("~/work/.config/pear/config.local.kdl"));
 
 let with_local = files.next()?;
-assert_eq!(with_local.path(), Path::new("/configs/user-1/pear/config.kdl"));
-assert_eq!(with_local.local_path(), Path::new("/configs/user-1/pear/config.local.kdl"));
+if cfg!(windows) {
+   assert_eq!(with_local.path(), Path::new(r"C:\Users\runneradmin\AppData\Roaming\pear\config.kdl"));
+   assert_eq!(with_local.local_path(), Path::new(r"C:\Users\runneradmin\AppData\Roaming\pear\config.local.kdl"));
+} else {
+   assert_eq!(with_local.path(), Path::new("/configs/user-1/pear/config.kdl"));
+   assert_eq!(with_local.local_path(), Path::new("/configs/user-1/pear/config.local.kdl"));
+}
 
 assert_eq!(files.next(), None);
 # Some(()) }
