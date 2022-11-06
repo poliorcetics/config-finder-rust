@@ -44,6 +44,7 @@ impl ConfigDirs {
             paths: Vec::new(),
             added_cwd: false,
             added_platform: false,
+            #[cfg(unix)]
             added_etc: false,
         }
     }
