@@ -1,0 +1,10 @@
+## Configurations docs searchable by version:
+## https://rust-lang.github.io/rustfmt/
+##
+## Project's repo:
+## https://github.com/rust-lang/rustfmt/
+
+edition = "2021"
+fn_call_width = 60
+match_block_trailing_comma = true
+max_width = 120

@@ -1,0 +1,34 @@
+[package]
+name = "config-finder"
+version = "0.1.0"
+authors = [
+    "Alexis (Poliorcetics) Bourget <alexis.bourget+github@gmail.com>",
+]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/poliorcetics/config-finder"
+homepage = "https://docs.rs/config-finder"
+readme = "README.md"
+description = """
+Easily find config files and directories for your CLI application.
+"""
+categories = [
+    "configuration",
+    "filesystem",
+]
+keywords = [
+    "cli",
+    "search",
+    "utility",
+    "xdg",
+]
+edition = "2021"
+rust-version = "1.56.0"
+
+[dependencies]
+dirs-sys = "0.3.7"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
