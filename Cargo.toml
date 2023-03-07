@@ -25,7 +25,7 @@ edition = "2021"
 rust-version = "1.56.0"
 
 [dependencies]
-dirs-sys = "0.3.7"
+dirs-sys = "0.4.0"
 
 [badges]
 maintenance = { status = "actively-developed" }
